@@ -6,21 +6,21 @@ import java.util.List;
 
 public class ShoppersDelight {
 
-//    public static void main(String args[]) {
-//        List<Integer> a = new ArrayList<>();
-//        List<Integer> b = new ArrayList<>();
-//        List<Integer> c = new ArrayList<>();
-//        List<Integer> d = new ArrayList<>();
-//        a.add(2);
-//        a.add(3);
-//        b.add(4);
-//        c.add(2);
-//        c.add(3);
-//        d.add(1);
-//        d.add(2);
-//
-//        System.out.println(getNumberOfOptions(a,b,c,d,10));
-//    }
+    public static void main(String args[]) {
+        List<Integer> a = new ArrayList<>();
+        List<Integer> b = new ArrayList<>();
+        List<Integer> c = new ArrayList<>();
+        List<Integer> d = new ArrayList<>();
+        a.add(2);
+        a.add(3);
+        b.add(4);
+        c.add(2);
+        c.add(3);
+        d.add(1);
+        d.add(2);
+
+        System.out.println(getNumberOfOptions(a,b,c,d,10));
+    }
 
     public static long getNumberOfOptions(List<Integer> priceOfJeans, List<Integer> priceOfShoes, List<Integer> priceOfSkirts, List<Integer> priceOfTops, int budgeted) {
         // Write your code here

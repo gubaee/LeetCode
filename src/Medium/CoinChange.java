@@ -2,7 +2,7 @@ package Medium;
 
 public class CoinChange {
     public static void main(String args[]) {
-        System.out.println(coinChange(new int [] {1}, 0));
+        System.out.println(coinChange(new int [] {1,2,5}, 11));
     }
     public static int coinChange(int[] coins, int amount) {
         if (amount == 0) {
@@ -29,4 +29,5 @@ public class CoinChange {
             dp[i] = Integer.MAX_VALUE-1;
         }
     }
+
 }

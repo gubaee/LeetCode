@@ -77,5 +77,4 @@ public class PurchasingSupplies {
         }
         return emptyContainers % freeTradingCost;
     }
-
 }
