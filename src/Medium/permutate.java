@@ -5,10 +5,13 @@ import java.util.List;
 
 public class permutate {
     public static void main(String args[]) {
-        List<List<Integer>> list = new ArrayList<>();
-        int [] nums = {1,2,3};
-        permute(nums);
-        System.out.println();
+//        List<List<Integer>> list = new ArrayList<>();
+//        int [] nums = {1,2,3};
+//        permute(nums);
+//        System.out.println();
+        String S = "bbbbayobq";
+        permutate(new StringBuilder(S), 0);
+        System.out.println(resultString);
     }
 
     static List<List<Integer>> possiblePermutations = new ArrayList<>();
@@ -30,6 +33,21 @@ public class permutate {
             swap(array, i, start);  // after adding permutation, we want this back to be original array
         }
     }
+    static String resultString = "";
+    public static void permutate(StringBuilder sb, int start) {
+        if (start == sb.length()) {
+            resultString = sb.toString();
+            if (resultString.equals("babobqbyb")) {
+                System.out.println();
+            }
+
+        }
+        for (int i = start; i < sb.length(); ++i) {
+            swap(sb, i, start); // whenever we get different index, it swaps
+            permutate(sb, start + 1); // recursively permute all possible combinations
+            swap(sb, i, start);  // after adding permutation, we want this back to be original array
+        }
+    }
 
     public static void swap(int[] array, int i, int j) {
         if (i != j) {
@@ -37,6 +55,11 @@ public class permutate {
             array[i] = array[j];
             array[j] = temp;
         }
+    }
+    public static void swap(StringBuilder sb, int i, int j) {
+        char temp = sb.charAt(i);
+        sb.setCharAt(i, sb.charAt(j));
+        sb.setCharAt(j, temp);
     }
 
 //    public static List<List<Integer>> permute(int[] nums) {

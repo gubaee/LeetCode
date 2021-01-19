@@ -3,7 +3,8 @@ import java.util.*;
 
 public class LabelingSystem {
     public static void main(String args[]) {
-        System.out.println(getResult(2, "baccbbcccc"));
+//        System.out.println(getResult(2, "baccbbcccc"));
+        System.out.println(getResult(2, "azzzzz"));
     }
     public static String getResult(int charLimit, String originalLabel) {
         // priority queue that keeps track of biggest char
@@ -48,6 +49,9 @@ public class LabelingSystem {
                 }
 
             } else { // if it reached limit, append next char
+                if (pq.size() == 1) { // if reached limit, and if there is only current char left, then break
+                    break;
+                }
                 char temp = curChar;
                 pq.remove();
                 char nextChar = pq.peek();

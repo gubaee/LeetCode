@@ -14,6 +14,7 @@ public class MaximalSquare {
         matrix[3] = new char[]{'1', '0', '0', '1', '0'};
         System.out.println(maximalSquare(matrix));
     }
+
     public static int maximalSquare(char[][] matrix) {
         if(matrix.length == 0){
             return 0;
